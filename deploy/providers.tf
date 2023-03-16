@@ -4,6 +4,11 @@
 terraform {
   required_version = ">= 1.1"
 
+  backend "gcs" {
+    bucket = "bucket-tfstate-root"
+    prefix = "psimakov-disco/any/terraform/state"
+  }
+
   required_providers {
     google = {
       source  = "hashicorp/google"
