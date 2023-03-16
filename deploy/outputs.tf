@@ -16,7 +16,7 @@ output "IDENTITY_PROVIDER" {
 }
 
 output "REGISTRY_URI" {
-  value       = var.runtime_only ? null : "${google_artifact_registry_repository.registry[0].location}-docker.pkg.dev/${data.google_project.project.name}/${google_artifact_registry_repository.registry[0].name}"
+  value       = var.runtime_only ? null : "${google_artifact_registry_repository.registry[0].location}-docker.pkg.dev/${var.project_name}/${google_artifact_registry_repository.registry[0].name}"
   description = "Artifact Registry location."
 }
 
