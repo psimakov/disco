@@ -1,7 +1,7 @@
 # Description: Outputs for the deployment
 
 output "PROJECT_ID" {
-  value       = data.google_project.project.name
+  value       = var.project_id
   description = "Project ID to use in Auth action for GCP in GitHub."
 }
 
