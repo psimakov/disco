@@ -24,9 +24,6 @@ locals {
   ]
 }
 
-# Data source to access GCP project metadata 
-data "google_project" "project" {}
-
 
 # Enable the required GCP APIs
 resource "google_project_service" "default" {
