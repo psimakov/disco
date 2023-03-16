@@ -6,12 +6,6 @@ variable "project_id" {
   nullable    = false
 }
 
-variable "project_name" {
-  description = "GCP Project Name"
-  type        = string
-  nullable    = false
-}
-
 variable "name" {
   description = "Base name to derive everythign else from"
   default     = "disco"
