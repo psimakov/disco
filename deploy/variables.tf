@@ -1,5 +1,11 @@
 # Description: List of variables which can be provided ar runtime to override the specified defaults 
 
+variable "project_name" {
+  description = "GCP Project Name"
+  type        = string
+  nullable    = false
+}
+
 variable "project_id" {
   description = "GCP Project ID"
   type        = string
