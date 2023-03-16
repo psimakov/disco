@@ -16,6 +16,7 @@ resource "google_bigquery_dataset" "disco" {
 resource "google_bigquery_table" "licenses" {
   dataset_id = google_bigquery_dataset.disco.dataset_id
   table_id   = "licenses"
+  deletion_protection = false
 
   time_partitioning {
     type = "DAY"
@@ -33,6 +34,7 @@ resource "google_bigquery_table" "licenses" {
 resource "google_bigquery_table" "licenses_day" {
   dataset_id = google_bigquery_dataset.disco.dataset_id
   table_id   = "licenses_day"
+  deletion_protection = false
 
   view {
     use_legacy_sql = false
@@ -56,6 +58,7 @@ EOF
 resource "google_bigquery_table" "vulnerabilities" {
   dataset_id = google_bigquery_dataset.disco.dataset_id
   table_id   = "vulnerabilities"
+  deletion_protection = false
 
   time_partitioning {
     type = "DAY"
@@ -72,6 +75,7 @@ resource "google_bigquery_table" "vulnerabilities" {
 resource "google_bigquery_table" "vulnerabilities_day" {
   dataset_id = google_bigquery_dataset.disco.dataset_id
   table_id   = "vulnerabilities_day"
+  deletion_protection = false
 
   view {
     use_legacy_sql = false
@@ -99,6 +103,7 @@ EOF
 resource "google_bigquery_table" "packages" {
   dataset_id = google_bigquery_dataset.disco.dataset_id
   table_id   = "packages"
+  deletion_protection = false
 
   time_partitioning {
     type = "DAY"
@@ -114,6 +119,7 @@ resource "google_bigquery_table" "packages" {
 resource "google_bigquery_table" "packages_day" {
   dataset_id = google_bigquery_dataset.disco.dataset_id
   table_id   = "packages_day"
+  deletion_protection = false
 
   view {
     use_legacy_sql = false
