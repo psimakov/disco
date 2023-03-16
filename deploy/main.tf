@@ -21,6 +21,7 @@ locals {
     "servicecontrol.googleapis.com",
     "servicemanagement.googleapis.com",
     "storage-api.googleapis.com",
+    "cloudresourcemanager.googleapis.com"
   ]
 }
 
